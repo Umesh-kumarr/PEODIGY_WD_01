@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxStay - Premium Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-hotel"></i>
+          <span>LuxStay</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" class="btn-login">Login</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>Find Your Perfect Stay</h1>
+        <p>Discover luxury hotels, boutique accommodations, and unforgettable experiences worldwide</p>
+        
+        <div class="booking-form">
+          <div class="form-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Where are you going?" id="destination">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="checkin">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-calendar-alt"></i>
+            <input type="date" id="checkout">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-users"></i>
+            <select id="guests">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4+ Guests</option>
+            </select>
+          </div>
+          <button class="btn-search" onclick="searchHotels()">
+            <i class="fas fa-search"></i>
+            Search Hotels
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Safe & Secure</h3>
+            <p>Your data is protected with bank-level security</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-percent"></i>
+            <h3>Best Prices</h3>
+            <p>Guaranteed lowest prices or we'll match them</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock customer support available</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-star"></i>
+            <h3>Premium Quality</h3>
+            <p>Curated selection of top-rated accommodations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hotels" class="hotels">
+      <div class="container">
+        <h2>Popular Hotels</h2>
+                    <div class="hotels-grid">
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Grand Plaza Hotel">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Grand Plaza Hotel</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-swimming-pool"></i> Pool</span>
+                            <span><i class="fas fa-utensils"></i> Restaurant</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$299</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80" alt="Seaside Resort">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Seaside Resort</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, USA</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-umbrella-beach"></i> Beach Access</span>
+                            <span><i class="fas fa-spa"></i> Spa</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$199</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80" alt="Alpine Lodge">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Alpine Lodge</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Aspen, USA</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-skiing"></i> Ski Access</span>
+                            <span><i class="fas fa-fire"></i> Fireplace</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$399</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=400&q=80" alt="Urban Boutique Hotel">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Urban Boutique Hotel</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-coffee"></i> Coffee Bar</span>
+                            <span><i class="fas fa-concierge-bell"></i> Concierge</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$249</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.pexels.com/photos/261108/pexels-photo-261108.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Luxury Resort">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Tropical Paradise Resort</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bali, Indonesia</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-umbrella-beach"></i> Private Beach</span>
+                            <span><i class="fas fa-spa"></i> Spa & Wellness</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$179</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="https://images.pexels.com/photos/261109/pexels-photo-261109.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Historic Hotel">
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="hotel-info">
+                        <h3>Heritage Palace Hotel</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-utensils"></i> Fine Dining</span>
+                            <span><i class="fas fa-palette"></i> Art Gallery</span>
+                        </div>
+                        <div class="hotel-price">
+                            <span class="price">$459</span>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <button class="btn-book">Book Now</button>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+      <div class="container">
+        <h2>Popular Destinations</h2>
+                <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=400&q=80" alt="Tokyo">
+                <div class="destination-overlay">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Modern Metropolis</p>
+                    <span class="hotel-count">200+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=400&q=80" alt="Paris">
+                <div class="destination-overlay">
+                    <h3>Paris, France</h3>
+                    <p>City of Light</p>
+                    <span class="hotel-count">150+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=400&q=80" alt="Bali">
+                <div class="destination-overlay">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Tropical Paradise</p>
+                    <span class="hotel-count">180+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=400&q=80" alt="New York">
+                <div class="destination-overlay">
+                    <h3>New York, USA</h3>
+                    <p>The Big Apple</p>
+                    <span class="hotel-count">300+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=400&q=80" alt="Venice">
+                <div class="destination-overlay">
+                    <h3>Venice, Italy</h3>
+                    <p>Floating City</p>
+                    <span class="hotel-count">120+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=400&q=80" alt="Dubai">
+                <div class="destination-overlay">
+                    <h3>Dubai, UAE</h3>
+                    <p>Desert Oasis</p>
+                    <span class="hotel-count">250+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80" alt="Swiss Alps">
+                <div class="destination-overlay">
+                    <h3>Swiss Alps</h3>
+                    <p>Mountain Majesty</p>
+                    <span class="hotel-count">90+ Hotels</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="San Francisco">
+                <div class="destination-overlay">
+                    <h3>San Francisco, USA</h3>
+                    <p>Golden Gate City</p>
+                    <span class="hotel-count">180+ Hotels</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>What Our Guests Say</h2>
+                    <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing experience! The hotel was exactly as described and the booking process was seamless."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop&crop=face" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>Business Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best prices I've found online. Customer service was exceptional when I needed to modify my booking."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop&crop=face" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <span>Family Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The luxury resorts exceeded all expectations. Perfect for our honeymoon getaway!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop&crop=face" alt="Emma Rodriguez">
+                        <div>
+                            <h4>Emma Rodriguez</h4>
+                            <span>Honeymoon Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Fast booking process and great selection of boutique hotels. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop&crop=face" alt="David Thompson">
+                        <div>
+                            <h4>David Thompson</h4>
+                            <span>Adventure Traveler</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Get Special Offers</h2>
+          <p>Subscribe to our newsletter and get exclusive deals and discounts</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" id="newsletter-email">
+            <button onclick="subscribeNewsletter()">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <i class="fas fa-hotel"></i>
+              <span>LuxStay</span>
+            </div>
+            <p>Your trusted partner for luxury hotel bookings worldwide.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#hotels">Hotels</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#about">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@luxstay.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Travel St, City, Country</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 LuxStay. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
